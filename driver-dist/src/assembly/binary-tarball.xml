@@ -51,29 +51,6 @@
             </binaries>
         </moduleSet>
 
-        <!-- dependencies of module cassandra-driver-mapping -->
-        <moduleSet>
-            <useAllReactorProjects>true</useAllReactorProjects>
-            <includes>
-                <include>com.datastax.cassandra:cassandra-driver-mapping</include>
-            </includes>
-            <binaries>
-                <unpack>false</unpack>
-                <dependencySets>
-                    <dependencySet>
-                        <outputDirectory>lib/mapping</outputDirectory>
-                        <excludes>
-                            <!-- reactor projects -->
-                            <exclude>com.datastax.cassandra:cassandra-driver-core</exclude>
-                            <exclude>com.datastax.cassandra:cassandra-driver-mapping</exclude>
-                            <exclude>com.datastax.cassandra:cassandra-driver-extras</exclude>
-                        </excludes>
-                        <useTransitiveFiltering>true</useTransitiveFiltering>
-                    </dependencySet>
-                </dependencySets>
-            </binaries>
-        </moduleSet>
-
         <!-- dependencies of module cassandra:cassandra-driver-extras -->
         <moduleSet>
             <useAllReactorProjects>true</useAllReactorProjects>
